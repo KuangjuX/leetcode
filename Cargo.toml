@@ -1,0 +1,5 @@
+[package]
+name = "leetcode-rs"
+version = "0.1.0"
+authors = ["KuangjuX <qcx@tju.edu.cn>"]
+edition = "2018"
