@@ -1,8 +1,10 @@
+use std::ptr;
+
 struct LRUCache {
     capacity: i32,
     size: i32,
-    head: Option<*mut LRU>,
-    tail: Option<*mut LRU>
+    head: *mut LRU,
+    tail: *mut LRU
 }
 
 struct KeyValue {
@@ -11,10 +13,9 @@ struct KeyValue {
 }
 
 struct LRU {
-    prev: Option<*mut LRU>,
-    next: Option<*mut LRU>,
-    key: i32,
-    value: i32
+    prev: *mut LRU,
+    next: *mut LRU,
+    data: KeyValue
 }
 
 
@@ -28,72 +29,101 @@ impl LRUCache {
         Self {
             capacity,
             size: 0,
-            head: None,
-            tail: None
+            head: ptr::null_mut(),
+            tail: ptr::null_mut(),
         }
     }
     
     fn get(&mut self, key: i32) -> i32 {
-        let res = self.find(key);
-        if res.is_none() {
-            return -1
-        }
-        let node = res.unwrap();
-        // 将该节点提取到首位
-        let next = node.next;
-        let prev = node.prev;
+       match self.find(key) {
+           Some(node) => {
+               self.flush(node);
+               unsafe{
+                   (&*node).data.value
+               }
+           },
 
-        self.head = Some(node);
-        node.next = self.head;
-        node.prev = None;
-        node.value
+           None => {
+               -1
+           }
+       }
+        
     }
 
-    fn find(&mut self, key: i32) -> Option<&mut LRU> {
-        let mut node = unsafe {
-            &mut *self.head.unwrap()
-        };
-        while node.next != None {
-            if node.key == key {
-                return Some(node)
-            }
-            node = unsafe{ &mut *node.next.unwrap() };
-        }
-        if node.key == key {
-            return Some(node)
-        }
-        None
-    }
     
     fn put(&mut self, key: i32, value: i32) {
+        let mut new_node = LRU{
+            prev: ptr::null_mut(),
+            next: ptr::null_mut(),
+            data: KeyValue{ key, value }
+        };
         if self.size == 0 {
-            let mut node = LRU {
-                key,
-                value,
-                next: None,
-                prev: None
-            };
-            self.head = Some(&mut node);
-            self.tail = Some(&mut node);
+            self.head = &mut new_node as *mut LRU;
+            self.tail = &mut new_node as *mut LRU;
             self.size += 1;
         }else if self.size < self.capacity {
-            let mut node = LRU {
-                key,
-                value,
-                next: None,
-                prev: self.tail
-            };
-            let tail = unsafe{ &mut *self.tail.unwrap() };
-            tail.next = Some((&mut node) as *mut LRU);
+            self.append(&mut new_node as *mut LRU);
+            self.size += 1;
         }else if self.size == self.capacity {
-            let tail = unsafe {
-                &mut *self.tail.unwrap()
-            };
-            tail.key = key;
-            tail.value = value;
+            // 此时需要替换LRU最后一个元素
+            self.replace(&mut new_node as *mut LRU);
+        }
+    }
+
+    fn append(&mut self, node: *mut LRU) {
+        unsafe{
+            (&mut *self.tail).next = node;
+            (&mut *node).prev = self.tail;
+            (&mut *node).next = ptr::null_mut();
+            self.tail = node;
+        }
+    }
+
+    fn replace(&mut self, node: *mut LRU) {
+        unsafe{
+            (&mut *node).prev = (&mut *self.tail).prev;
+            (&mut *node).next = ptr::null_mut();
+            self.tail = node;
+        }
+    }
+
+    fn flush(&mut self, node: *mut LRU) {
+        unsafe{
+            let data = &mut *node;
+            (&mut *data.prev).next = data.next;
+            (&mut *data.next).prev = data.prev;
+            data.prev = ptr::null_mut();
+            data.next = self.tail;
+            self.tail = node;
+        }
+    }
+
+    fn find(&self, key: i32) -> Option<*mut LRU> {
+        unsafe{
+            let mut ptr = self.head;
+            loop {
+                if ptr.is_null() {
+                    return None
+                }
+                let node = &mut *ptr;
+                if node.data.key == key {
+                    return Some(ptr)
+                }
+                ptr = node.next;
+            }
         }
     }
 }
+
+// pub struct IntoIter(LRUCache);
+
+// impl Iterator for IntoIter {
+//     type Item = KeyValue;
+
+//     fn next(&mut self) -> Option<KeyValue> {
+        
+//     }
+// }
 
 // * Your LRUCache object will be instantiated and called as such:
 // * let obj = LRUCache::new(capacity);
