@@ -1,21 +1,40 @@
 use std::ptr;
+use std::boxed::Box;
 
-struct LRUCache {
+pub struct LRUCache {
     capacity: i32,
     size: i32,
     head: *mut LRU,
     tail: *mut LRU
 }
 
-struct KeyValue {
+pub struct KeyValue {
     key: i32,
     value: i32,
 }
 
-struct LRU {
+pub struct LRU {
     prev: *mut LRU,
     next: *mut LRU,
     data: KeyValue
+}
+
+impl LRU {
+    pub fn uninit() -> Self {
+        Self {
+            prev: ptr::null_mut(),
+            next: ptr::null_mut(),
+            data: KeyValue{ key: 0, value: 0}
+        }
+    }
+
+    pub fn init(key: i32, value: i32) -> Self {
+        Self {
+            prev: ptr::null_mut(),
+            next: ptr::null_mut(),
+            data: KeyValue{ key, value }
+        }
+    }
 }
 
 
@@ -25,25 +44,27 @@ struct LRU {
  */
 impl LRUCache {
 
-    fn new(capacity: i32) -> Self {
+    pub fn new(capacity: i32) -> Self {
         Self {
             capacity,
             size: 0,
-            head: ptr::null_mut(),
-            tail: ptr::null_mut(),
+            head: Box::into_raw(Box::new(LRU::uninit())),
+            tail: Box::into_raw(Box::new(LRU::uninit())),
         }
     }
     
-    fn get(&mut self, key: i32) -> i32 {
+    pub fn get(&mut self, key: i32) -> i32 {
        match self.find(key) {
            Some(node) => {
                self.flush(node);
                unsafe{
+                   println!("[Get] value: {}", (&*node).data.value);
                    (&*node).data.value
                }
            },
 
            None => {
+                println!("[Get] value: {}", -1);
                -1
            }
        }
@@ -51,22 +72,33 @@ impl LRUCache {
     }
 
     
-    fn put(&mut self, key: i32, value: i32) {
-        let mut new_node = LRU{
-            prev: ptr::null_mut(),
-            next: ptr::null_mut(),
-            data: KeyValue{ key, value }
-        };
-        if self.size == 0 {
-            self.head = &mut new_node as *mut LRU;
-            self.tail = &mut new_node as *mut LRU;
-            self.size += 1;
-        }else if self.size < self.capacity {
-            self.append(&mut new_node as *mut LRU);
-            self.size += 1;
-        }else if self.size == self.capacity {
-            // 此时需要替换LRU最后一个元素
-            self.replace(&mut new_node as *mut LRU);
+    pub fn put(&mut self, key: i32, value: i32) {
+        // println!("size: {}", self.size);
+        match self.find(key) {
+            Some(node) => {
+                unsafe {
+                    let node = &mut *node;
+                    // node.data.key = key;
+                    node.data.value = value;
+                }
+            },
+
+            None => {
+                // println!("no find");
+                let new_node = Box::into_raw(Box::new(LRU::init(key, value)));
+                if self.size == 0 {
+                    self.head = new_node;
+                    self.tail = new_node;
+                    self.size += 1;
+                }else if self.size < self.capacity {
+                    self.append(new_node);
+                    self.size += 1;
+                }else if self.size == self.capacity {
+                    // 此时需要替换LRU最后一个元素
+                    // println!("replace");
+                    self.replace(new_node);
+                }
+            }
         }
     }
 
@@ -83,18 +115,31 @@ impl LRUCache {
         unsafe{
             (&mut *node).prev = (&mut *self.tail).prev;
             (&mut *node).next = ptr::null_mut();
+            // if !(&*self.tail).prev.is_null() {
+            //     (&mut *(&*self.tail).prev).next = node;
+            // }
+            (&mut *(&*self.tail).prev).next = node;
+            drop(self.tail);
             self.tail = node;
         }
     }
 
     fn flush(&mut self, node: *mut LRU) {
+        if node as *const _ == self.head as *const _ {
+            return
+        }
         unsafe{
             let data = &mut *node;
-            (&mut *data.prev).next = data.next;
-            (&mut *data.next).prev = data.prev;
+            if !data.prev.is_null() {
+                (&mut *data.prev).next = data.next;
+            }
+            if !data.next.is_null() {
+                (&mut *data.next).prev = data.prev;
+            }
             data.prev = ptr::null_mut();
-            data.next = self.tail;
-            self.tail = node;
+            data.next = self.head;
+            (&mut *self.head).prev = node;
+            self.head = node;
         }
     }
 
@@ -110,6 +155,7 @@ impl LRUCache {
                     return Some(ptr)
                 }
                 ptr = node.next;
+                // println!("next");
             }
         }
     }
