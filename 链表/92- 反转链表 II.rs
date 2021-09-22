@@ -55,4 +55,36 @@ impl Solution {
 
         root.next
     }
+
+    pub fn reverse_between2(mut head: Option<Box<ListNode>>, left: i32, right: i32) -> Option<Box<ListNode>> {
+        let mut root = Box::new(ListNode::new(0));
+        let mut pos = root.as_mut();
+        let mut counter = 1;
+        let mut stack = Vec::new();
+        while let Some(mut node) = head.take() {
+            head = node.next.take();
+            if counter < left {
+                pos = pos.next.get_or_insert(node);
+                counter += 1;
+            } else if counter <= right {
+                stack.push(node);
+                if counter == right {
+                    break;
+                } else {
+                    counter += 1;
+                }
+            } else {
+                unreachable!()
+            }
+        }
+        while let Some(node) = stack.pop() {
+            pos = pos.next.get_or_insert(node);
+        }
+        while let Some(mut node) = head.take() {
+            head = node.next.take();
+            pos = pos.next.get_or_insert(node);
+        }
+        
+        root.next
+    }
 }
