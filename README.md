@@ -7,7 +7,7 @@ My solution for leetcode in Rust.
   
 
 - [x] [19 删除链表倒数第n个节点](链表/19-删除链表倒数第n个节点.rs)  
-- [x] [92 反转链表 II](链表/92- 反转链表II.rs)  
+- [x] [92 反转链表 II](链表/92-反转链表II.rs)  
 
 
 ## 二叉树
