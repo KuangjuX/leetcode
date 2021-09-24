@@ -19,28 +19,44 @@
 use std::rc::Rc;
 use std::cell::RefCell;
 impl Solution {
-    pub fn has_path_sum(root: Option<Rc<RefCell<TreeNode>>>, mut target_sum: i32) -> bool {
+    pub fn get_target(
+        root: Option<Rc<RefCell<TreeNode>>>,
+        mut target_sum: i32,
+        mut path: Vec<i32>,
+        target: &mut Vec<Vec<i32>>,
+    ) {
         if let Some(node) = root {
-            // let tree_node = node.borrow();
             if node.borrow().left == None && node.borrow().right == None {
-                if node.borrow().val == target_sum {
-                    return true
+                if target_sum == node.borrow().val {
+                    path.push(node.borrow().val);
+                    target.push(path);
+                    return
                 }
             }else if node.borrow().left == None {
                 target_sum -= node.borrow().val;
+                path.push(node.borrow().val);
                 let right_node = node.borrow_mut().right.take();
-                return Self::has_path_sum(right_node, target_sum)
+                Self::get_target(right_node, target_sum, path, target)
             }else if node.borrow().right == None {
                 target_sum -= node.borrow().val;
+                path.push(node.borrow().val);
                 let left_node = node.borrow_mut().left.take();
-                return Self::has_path_sum(left_node, target_sum)
+                Self::get_target(left_node, target_sum, path, target)
             }else {
                 target_sum -= node.borrow().val;
+                path.push(node.borrow().val);
                 let left_node = node.borrow_mut().left.take();
                 let right_node = node.borrow_mut().right.take();
-                return Self::has_path_sum(left_node, target_sum) | Self::has_path_sum(right_node, target_sum)
+                Self::get_target(left_node, target_sum, path.clone(), target);
+                Self::get_target(right_node, target_sum, path.clone(), target)
             }
         }
-        false
+    }
+
+    pub fn path_sum(root: Option<Rc<RefCell<TreeNode>>>, target_sum: i32) -> Vec<Vec<i32>> {
+      let mut target = vec![];
+      let path = vec![];
+      Self::get_target(root, target_sum, path, &mut target);
+      target
     }
 }
