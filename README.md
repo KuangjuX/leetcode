@@ -2,6 +2,9 @@
 
 My solution for leetcode in Rust.
 
+## 数组
+- [x] [剑指Offer-II-069-山峰数组的顶部](数组/剑指Offer-II-069-山峰数组的顶部.rs)
+
 ## 链表
 [链表总结](链表/README.md)
   
