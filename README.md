@@ -70,3 +70,4 @@ My solution for leetcode in Rust.
   
 ## 回溯
 - [x] [46 全排列](回溯/46-全排列.rs)
+- [x] [47 全排列 II](回溯/47-全排列II.rs)
