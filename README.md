@@ -1,22 +1,20 @@
-# leetcode-rs
+# leetcode
 
 My solution for leetcode in Rust.
 
 ## Questions
 
-| ID  | Title | Difficulty | C++ | Rust |
-| --- | ----- | ---------- | --- | ---- |
-| 739 |  Daily Temperatures |  Medium   | [C++](C++/739-%20Daily-Temperatures.cpp)    |   no   |
-|     |       |            |     |      |
-|     |       |            |     |      |
+| ID  | Title              | Difficulty | C++       | Rust |
+| --- | ------------------ | ------     | ---       |----|
+|  2  | Two Sum            | Medium     | no        | [Rust](Rust/链表/2-两数相加.rs) |
+| 739 | Daily Temperatures | Medium | [C++](C++/739-20Daily-Temperatures.cpp) | no   |
+
+
 
 ## 数组
 
 - [x] [剑指Offer-II-069-山峰数组的顶部](数组/剑指Offer-II-069-山峰数组的顶部.rs)
 
-## 链表
-
-[链表总结](链表/README.md)
 
 **单向链表**
 
