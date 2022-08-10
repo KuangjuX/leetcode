@@ -1,6 +1,6 @@
 # leetcode
 
-My solution for leetcode in Rust.
+My solution for leetcode and other algorithm problems.
 
 ## Questions
 
