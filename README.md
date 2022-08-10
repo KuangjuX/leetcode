@@ -10,4 +10,11 @@ My solution for leetcode in Rust.
 |61| Rotate List | Medium | [C++](C++/61-Rotate-List.cpp) | no |
 | 739 | Daily Temperatures | Medium | [C++](C++/739-20Daily-Temperatures.cpp) | no |
 
+### Linked List
+- 2 Add Two Numbers
+- 61 Rotate List 
+
+### Stack 
+- 739 Daily Temperatures
+
 
