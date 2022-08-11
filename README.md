@@ -31,4 +31,12 @@ My solution for leetcode and other algorithm problems.
 ### String 
 - Longest Substring Without Repeating Characters
 
+## 408 Postgraduate Exam Questions
+### Array 
+- [41 First Missing Positive - 2018](C++/41-First-Missing-Positive.cpp)
+
+### Linked List
+- [61 Rotate List - 2010](C++/61-Rotate-List.cpp)
+- [143 Reorder List - 2019](C++/143-Reorder-List.cpp)
+
 
