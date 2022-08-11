@@ -11,12 +11,14 @@ My solution for leetcode and other algorithm problems.
 | 41 | First Missing Positive | Hard | [C++](C++/41-First-Missing-Positive.cpp)| no |
 |61| Rotate List | Medium | [C++](C++/61-Rotate-List.cpp) | no |
 |143| Reorder List | Medium | [C++](C++/143-Reorder-List.cpp)| no |
+|169| Majority Element | Easy | [C++](C++/169-Majority-Element.cpp) | no |
 |206| Reverse List | Easy | [C++](C++/206-Reverse-Linked-List.cpp) | no |
 | 739 | Daily Temperatures | Medium | [C++](C++/739-20Daily-Temperatures.cpp) | no |
 | 876 | Middle of the Linked List | Easy | [C++](C++/876-Middle-of-the-Linked-List.cpp) | no |
 
 ### Array
 - 41 First Missing Positive
+- 169 Majority Element
 
 ### Linked List
 - 2 Add Two Numbers
@@ -34,6 +36,7 @@ My solution for leetcode and other algorithm problems.
 ## 408 Postgraduate Exam Questions
 ### Array 
 - [41 First Missing Positive - 2018](C++/41-First-Missing-Positive.cpp)
+- [169 Majority Element - 2013](C++/169-Majority-Element.cpp)
 
 ### Linked List
 - [61 Rotate List - 2010](C++/61-Rotate-List.cpp)
