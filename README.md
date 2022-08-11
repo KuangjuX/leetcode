@@ -1,6 +1,7 @@
 # leetcode
 
-My solution for leetcode and other algorithm problems.
+My solution for leetcode and other algorithm problems using C++ && Rust.    
+  
 
 ## Questions
 
@@ -37,6 +38,7 @@ My solution for leetcode and other algorithm problems.
 ### Array 
 - [41 First Missing Positive - 2018](C++/41-First-Missing-Positive.cpp)
 - [169 Majority Element - 2013](C++/169-Majority-Element.cpp)
+- [Acwing 3874 三元组的最小距离 - 2020](Acwing/3874-三元组的最小距离.cpp)
 
 ### Linked List
 - [61 Rotate List - 2010](C++/61-Rotate-List.cpp)
