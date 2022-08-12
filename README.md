@@ -2,6 +2,9 @@
 
 My solution for leetcode and other algorithm problems using C++ && Rust.    
   
+## Catalog
+- [Questions](https://github.com/KuangjuX/leetcode#questions)
+- [408 Postgraduate Exam Questions](https://github.com/KuangjuX/leetcode#408-postgraduate-exam-questions)
 
 ## Questions
 ### Leetcode 
