@@ -19,6 +19,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 | 23 | Merge k Sorted Lists | Hard | no | [Rust](Rust/23-%E5%90%88%E5%B9%B6K%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8.rs) |
 | 25 | Reverse Nodes in k-Group | Hard | no | [Rust](Rust/25-K%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8.rs) |
 | 33 | Search in Rotated Sorted Array | Medium | no | [Rust](Rust/33-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84.rs) |
+| 39 | Combination Sum | Medium | [C++](C++/39-Combination-Sum.cpp) | no |
 | 41 | First Missing Positive | Hard | [C++](C++/41-First-Missing-Positive.cpp)| no |
 | 42 | Trapping Rain Water | Hard | no | [Rust](Rust/42-%E6%8E%A5%E9%9B%A8%E6%B0%B4.rs) |
 | 46 | Permutations | Medium | no | [Rust](Rust/46-%E5%85%A8%E6%8E%92%E5%88%97.rs) |
@@ -56,12 +57,14 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 - 4 Median of Two Sorted Arrays
 - 11 Container With Most Water
 - 33 Search in Rotated Sorted Array
+- 39 combination Sum
 - 41 First Missing Positive
 - 42 Trapping Rain Water
 - 169 Majority Element
 - 189 Rotate Array 
 
 ### Backtrace
+- 39 Combination Sum
 - 93 Restore IP Addresses
 
 ### Double Pointer
