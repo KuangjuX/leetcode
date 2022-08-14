@@ -14,6 +14,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 |  2  | Add  Two Numbers   |Medium|[C++](C++/2-Add-Two-Numbers.cpp)|[Rust](Rust/2-两数相加.rs) |
 | 3 | Longest Substring Without Repeating Characters | Medium | no | [Rust](Rust/3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2.rs) |
 | 4 | Median of Two Sorted Arrays | Hard | [C++](C++/4-Median-of-Two-Sorted-Arrays.cpp) | no |
+| 11 | Container With Most Water | Medium | [C++](C++/11-Container-With-Most-Water.cpp) | no |
 | 19 | Remove Nth Node From End of List | Medium | [C++](C++/19-Remove-Nth-Node-From-End-of-List.cpp) | [Rust](Rust/19-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E5%80%92%E6%95%B0%E7%AC%ACn%E4%B8%AA%E8%8A%82%E7%82%B9.rs) |
 | 23 | Merge k Sorted Lists | Hard | no | [Rust](Rust/23-%E5%90%88%E5%B9%B6K%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8.rs) |
 | 25 | Reverse Nodes in k-Group | Hard | no | [Rust](Rust/25-K%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8.rs) |
@@ -53,6 +54,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 
 ### Array
 - 4 Median of Two Sorted Arrays
+- 11 Container With Most Water
 - 33 Search in Rotated Sorted Array
 - 41 First Missing Positive
 - 42 Trapping Rain Water
@@ -61,6 +63,9 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 
 ### Backtrace
 - 93 Restore IP Addresses
+
+### Double Pointer
+- 11 Container With Most Water
 
 ### Graph
 - 200 Number of Islands
