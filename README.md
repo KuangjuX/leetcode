@@ -25,6 +25,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 | 47 | Permutations II | Medium | no | [Rust](Rust/47-%E5%85%A8%E6%8E%92%E5%88%97II.rs) |
 | 53 | Maximum Subarray | Medium | [C++](C++/53-Maximun-Subarray.cpp) | no |
 | 54 | Spiral Matrix | Medium | no | [Rust](Rust/54-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5.rs) |
+| 56 | Merge Intervals | Medium | [C++](C++/56-Merge-Intervals.cpp) | no |
 | 61 | Rotate List | Medium | [C++](C++/61-Rotate-List.cpp) | no |
 | 86 | Partition List | Medium | no | [Rust](Rust/86-%E5%88%86%E5%89%B2%E9%93%BE%E8%A1%A8.rs) |
 | 92 | Reverse Linked List II | Medium | no | [Rust](Rust/92-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8II.rs) |
@@ -61,6 +62,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 - 39 combination Sum
 - 41 First Missing Positive
 - 42 Trapping Rain Water
+- 56 Merge Intervals
 - 169 Majority Element
 - 189 Rotate Array 
 
@@ -105,6 +107,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 - 187 Repeated DNA Sequences
 
 ### Sort 
+- 56 Merge Intervals
 - 148 Sort List
 - 1996 The Number of Weak Characters in the Game
 
