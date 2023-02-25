@@ -118,17 +118,5 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 - 104 Maximum Depth of Binary Tree
 - 112  Path Sum
 
-## 408 Postgraduate Exam Questions
-### Array 
-- [4 Median of Two Sorted Arrays - 2011](C++/4-Median-of-Two-Sorted-Arrays.cpp)
-- [41 First Missing Positive - 2018](C++/41-First-Missing-Positive.cpp)
-- [169 Majority Element - 2013](C++/169-Majority-Element.cpp)
-- [189 Rotate Array - 2010](C++/189-Rotate-Array.cpp)
-- [Acwing 3874 三元组的最小距离 - 2020](Acwing/3874-三元组的最小距离.cpp)
-
-### Linked List
-- [19 Remove Nth Node From End of List - 2009](C++/19-Remove-Nth-Node-From-End-of-List.cpp)
-- [61 Rotate List - 2010](C++/61-Rotate-List.cpp)
-- [143 Reorder List - 2019](C++/143-Reorder-List.cpp)
 
 
