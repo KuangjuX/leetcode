@@ -17,6 +17,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 | 19 | Remove Nth Node From End of List | Medium | [C++](C++/19-Remove-Nth-Node-From-End-of-List.cpp) | [Rust](Rust/19-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E5%80%92%E6%95%B0%E7%AC%ACn%E4%B8%AA%E8%8A%82%E7%82%B9.rs) |
 | 23 | Merge k Sorted Lists | Hard | no | [Rust](Rust/23-%E5%90%88%E5%B9%B6K%E4%B8%AA%E5%8D%87%E5%BA%8F%E9%93%BE%E8%A1%A8.rs) |
 | 25 | Reverse Nodes in k-Group | Hard | no | [Rust](Rust/25-K%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8.rs) |
+| 27 | Remove Element | Easy | [C++](C++/27-Remove-Elements.cpp)| no |
 | 33 | Search in Rotated Sorted Array | Medium | no | [Rust](Rust/33-%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84.rs) |
 | 39 | Combination Sum | Medium | [C++](C++/39-Combination-Sum.cpp) | no |
 | 41 | First Missing Positive | Hard | [C++](C++/41-First-Missing-Positive.cpp)| no |
@@ -58,6 +59,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 ### Array
 - 4 Median of Two Sorted Arrays
 - 11 Container With Most Water
+- 27 Remove Element
 - 33 Search in Rotated Sorted Array
 - 39 combination Sum
 - 41 First Missing Positive
@@ -70,8 +72,9 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 - 39 Combination Sum
 - 93 Restore IP Addresses
 
-### Double Pointer
+### Two Pointers
 - 11 Container With Most Water
+- 27 Remove Element
 
 ### Graph
 - 200 Number of Islands
