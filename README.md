@@ -46,6 +46,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 | 207 | Course Schedule | Medium | no | [Rust](Rust/207-课程表.rs) |
 | 210 | Course Schedule II | Medium | no | [Rust](Rust/210-课程表II.rs) |
 |206| Reverse List | Easy | [C++](C++/206-Reverse-Linked-List.cpp) | no |
+| 225 | Implement Stack using Queues | Easy | [C++](C++/225-Implement-Stack_using-Queues.cpp) | no |
 | 445 | Add Two Numbers II | Medium | no | [Rust](Rust/445-两数相加-II.rs) |
 | 739 | Daily Temperatures | Medium | [C++](C++/739-20Daily-Temperatures.cpp) | no |
 | 765 | Couples Holding Hands | Hard | no | [Rust](Rust/765-情侣牵手.rs) |
@@ -72,9 +73,9 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 - 39 Combination Sum
 - 93 Restore IP Addresses
 
-### Two Pointers
-- 11 Container With Most Water
-- 27 Remove Element
+
+### Design
+- 225 Implement Stack using Queues
 
 ### Graph
 - 200 Number of Islands
@@ -102,6 +103,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 
 ### Stack 
 - 42 Trapping Rain Water
+- 225 Implement Stack using Queues
 - 739 Daily Temperatures
 
 ### String 
@@ -120,6 +122,10 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 - 103 Binary Tree Zigzag Level Order Traversal
 - 104 Maximum Depth of Binary Tree
 - 112  Path Sum
+
+### Two Pointers
+- 11 Container With Most Water
+- 27 Remove Element
 
 
 
