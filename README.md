@@ -39,6 +39,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 | 113 | Path Sum II | Medium | no | [Rust](Rust/113-路经总和II.rs) |
 | 143 | Reorder List | Medium | [C++](C++/143-Reorder-List.cpp)| no |
 | 148 | Sort List | Medium | [C++](C++/148-Sort-List.cpp) | no |
+| 155 | Min Stack | Medium | [C++](C++/155-Min-Stack.cpp) | no |
 | 169 | Majority Element | Easy | [C++](C++/169-Majority-Element.cpp) | no |
 | 187 | Repeated DNA Sequences | Easy | no | [Rust](Rust/187-重复的DNA序列.rs) |
 | 189 | Rotate Array | Medium | [C++](C++/189-Rotate-Array.cpp) | no |
@@ -75,6 +76,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 
 
 ### Design
+- 155 Min Stack
 - 225 Implement Stack using Queues
 
 ### Graph
@@ -103,6 +105,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 
 ### Stack 
 - 42 Trapping Rain Water
+- 155 Min Stack
 - 225 Implement Stack using Queues
 - 739 Daily Temperatures
 
