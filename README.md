@@ -53,6 +53,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 | 765 | Couples Holding Hands | Hard | no | [Rust](Rust/765-情侣牵手.rs) |
 | 815 | Bus Routes | Hard | no | [Rust](Rust/815-公交路线.rs) |
 | 876 | Middle of the Linked List | Easy | [C++](C++/876-Middle-of-the-Linked-List.cpp) | no |
+| 973 | K Closest Points | Medium | [C++](C++/973-K-Closest-Points.cpp) | no |
 | 1254 | Number of Closed Islands | Medium | no | [Rust](Rust/1254-统计封闭岛屿的数目.rs) |
 | 1996 | The Number of Weak Characters in the Game | Medium | no | [Rust](Rust/1996-游戏中弱角色的数量.rs)
 
@@ -102,6 +103,9 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 
 ## Matrix
 - 54 Spiral Matrix
+
+## Priority Queue
+- 973 K Closet Queue
 
 ### Stack 
 - 42 Trapping Rain Water
