@@ -50,6 +50,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 |206| Reverse List | Easy | [C++](C++/206-Reverse-Linked-List.cpp) | no |
 | 225 | Implement Stack using Queues | Easy | [C++](C++/225-Implement-Stack_using-Queues.cpp) | no |
 | 445 | Add Two Numbers II | Medium | no | [Rust](Rust/445-两数相加-II.rs) |
+| 540 | Single Element in a Sorted Array | [C++](C++/540-Single-Element-in-a-Sorted-Array.cpp) | no |
 | 739 | Daily Temperatures | Medium | [C++](C++/739-20Daily-Temperatures.cpp) | no |
 | 765 | Couples Holding Hands | Hard | no | [Rust](Rust/765-情侣牵手.rs) |
 | 815 | Bus Routes | Hard | no | [Rust](Rust/815-公交路线.rs) |
@@ -72,6 +73,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 - 56 Merge Intervals
 - 169 Majority Element
 - 189 Rotate Array 
+- 540 Single Element in a Sorted Array
 
 ### Backtrace
 - 39 Combination Sum
@@ -79,6 +81,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 
 ## Binary Search 
 - 34 Find First and Last Position of Element in Sorted Array
+- 540 Single Element in a Sorted Array
 
 ### Design
 - 155 Min Stack
