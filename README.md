@@ -49,6 +49,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 | 210 | Course Schedule II | Medium | no | [Rust](Rust/210-课程表II.rs) |
 |206| Reverse List | Easy | [C++](C++/206-Reverse-Linked-List.cpp) | no |
 | 225 | Implement Stack using Queues | Easy | [C++](C++/225-Implement-Stack_using-Queues.cpp) | no |
+| 395 | Longest Substring with At Least K Repeating Characters | Medium | [C++](C++/395-Longest-Substring-with-At-Least-K-Repeating-Characters.cpp) | no |
 | 445 | Add Two Numbers II | Medium | no | [Rust](Rust/445-两数相加-II.rs) |
 | 409 | Longest Palindrome | Easy | [C++](C++/409-Longest-Palindrome.cpp) | no |
 | 540 | Single Element in a Sorted Array | [C++](C++/540-Single-Element-in-a-Sorted-Array.cpp) | no |
@@ -87,6 +88,9 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 ### Design
 - 155 Min Stack
 - 225 Implement Stack using Queues
+
+### Divide and Conquer
+- 395 Longest Substring with At Least K Repeating Characters
 
 ### Graph
 - 200 Number of Islands
@@ -145,6 +149,7 @@ Hash Table
 ### Two Pointers
 - 11 Container With Most Water
 - 27 Remove Element
+- 395 Longest Substring with At Least K Repeating Characters
 
 
 
