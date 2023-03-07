@@ -50,6 +50,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 |206| Reverse List | Easy | [C++](C++/206-Reverse-Linked-List.cpp) | no |
 | 225 | Implement Stack using Queues | Easy | [C++](C++/225-Implement-Stack_using-Queues.cpp) | no |
 | 445 | Add Two Numbers II | Medium | no | [Rust](Rust/445-两数相加-II.rs) |
+| 409 | Longest Palindrome | Easy | [C++](C++/409-Longest-Palindrome.cpp) | no |
 | 540 | Single Element in a Sorted Array | [C++](C++/540-Single-Element-in-a-Sorted-Array.cpp) | no |
 | 739 | Daily Temperatures | Medium | [C++](C++/739-20Daily-Temperatures.cpp) | no |
 | 765 | Couples Holding Hands | Hard | no | [Rust](Rust/765-情侣牵手.rs) |
@@ -94,6 +95,9 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 - 815 Bus Routes
 - 1254 Number of Closed Islands
 
+Hash Table 
+- 409 Longest Palindrome
+
 ### Linked List
 - 2 Add Two Numbers
 - 19 Remove Nth Node From End of List
@@ -124,6 +128,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 - 3 Longest Substring Without Repeating Characters
 - 93 Restore IP Addresses
 - 187 Repeated DNA Sequences
+- 409 Longest Palindrome
 
 ### Sort 
 - 56 Merge Intervals
