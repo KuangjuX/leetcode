@@ -82,7 +82,7 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 - 39 Combination Sum
 - 93 Restore IP Addresses
 
-## Binary Search 
+### Binary Search 
 - 34 Find First and Last Position of Element in Sorted Array
 - 540 Single Element in a Sorted Array
 
@@ -118,10 +118,10 @@ My solution for leetcode and other algorithm problems using C++ && Rust.
 - 445 Add Two Numbers II
 - 876 Middle of the Linked List
 
-## Matrix
+### Matrix
 - 54 Spiral Matrix
 
-## Priority Queue
+### Priority Queue
 - 973 K Closet Queue
 
 ### Stack 
